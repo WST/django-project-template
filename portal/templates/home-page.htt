@@ -1,0 +1,6 @@
+{% extends 'abstract/page.htt' %}
+
+{% block content %}
+	<h1>Привет, мир!</h1>
+	<div>Django&nbsp;— отличный фреймворк, не правда ли?</div>
+{% endblock %}
