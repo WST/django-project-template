@@ -43,7 +43,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 # Корневая карта URL-ок
-ROOT_URLCONF = 'project_name.urls'
+ROOT_URLCONF = '{{ project_name }}.urls'
 
 TEMPLATES = [
 	{
@@ -63,7 +63,7 @@ TEMPLATES = [
 ]
 
 # WSGI-приложение. Нет смысла трогать эту настройку, она установлена в единственно верное значение.
-WSGI_APPLICATION = 'project_name.wsgi.application'
+WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 
 # Используемая БД
 # http://djbook.ru/rel1.8/ref/databases.html
