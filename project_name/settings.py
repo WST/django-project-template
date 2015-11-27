@@ -8,7 +8,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # В продакшене это необходимо переопределить, например, через local_settings.py
-SECRET_KEY = 'c(#i$afndixd=vz#c#1rk-70o0zqd(8j9%r&etkxoakit=vo-7'
+SECRET_KEY = '{{ secret_key }}'
 
 # Режим отладки. Исключительно для использования на машине разработчика.
 DEBUG = True
