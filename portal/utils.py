@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Наш проект
-from models import *
+from portal.models import *
 
 # Запросить SEO-данные для страницы
 def seo_data(page_slug):

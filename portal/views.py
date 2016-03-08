@@ -14,9 +14,9 @@ from django.db.models import Q
 from django.db import connection
 
 # наш проект
-from models import *
-from forms import *
-from utils import *
+from portal.models import *
+from portal.forms import *
+from portal.utils import *
 
 # Обработчик главной страницы сайта
 def home_page(request):
