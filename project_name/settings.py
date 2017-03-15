@@ -28,6 +28,7 @@ INSTALLED_APPS = (
 	'django.contrib.staticfiles',
 	'bootstrap_pagination',
 	'portal',
+	'captcha',
 )
 
 # Задействованные middleware. Более подробно: http://djbook.ru/rel1.8/topics/http/middleware.html
@@ -91,7 +92,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 try:
-	from local_settings import *
+	from {{ project_name }}.local_settings import *
 except:
 	print("Failed to load local_settings.py")
 	sys.exit(1)

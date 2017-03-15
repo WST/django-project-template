@@ -2,7 +2,8 @@
 
 # Django
 from django.conf.urls import include, url
+from portal import views
 
 urlpatterns = [
-	url(r'^$', 'portal.views.home_page', name = 'home'),
+	url(r'^$', views.home_page, name = 'home'),
 ]
