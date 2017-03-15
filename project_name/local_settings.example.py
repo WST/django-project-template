@@ -4,4 +4,4 @@
 DEBUG = True
 
 # Разрешённые имена хоста. Рекомендуется определить в local_settings.py
-ALLOWED_HOSTS = ['example.org']
+ALLOWED_HOSTS = ['example.org', '127.0.0.1']
