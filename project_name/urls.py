@@ -3,7 +3,7 @@
 # Внимание! Это глобальный urls.py проекта. Добавлять свои URL-ки лучше в urls.py приложения «portal».
 
 # Django
-from django.conf.urls import include, url
+from django.urls import include, path, re_path
 from django.conf import settings
 from django.contrib import admin
 from django.views.static import serve as serve_static
@@ -12,10 +12,10 @@ from django.views.static import serve as serve_static
 from portal import urls as portal_urls
 
 urlpatterns = [
-	url(r'^admin/', include(admin.site.urls)),
-	url(r'^captcha/', include('captcha.urls')),
-	url(r'', include(portal_urls)),
+	path('admin/', admin.site.urls),
+	path('captcha/', include('captcha.urls')),
+	path('', include(portal_urls)),
 
 	# Чисто отладочная строка
-	url(r'^media/(?P<path>.*)$', serve_static, {'document_root': settings.MEDIA_ROOT}),
+	re_path(r'^media/(?P<path>.*)$', serve_static, {'document_root': settings.MEDIA_ROOT}),
 ]
