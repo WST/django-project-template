@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
 
 class PortalMiddleware:
-	def __init__(self):
-		pass
+	def __init__(self, get_response):
+		self.get_response = get_response
 
-	def process_request(self, request):
-		return None
+	def __call__(self, request):
+		# Code to be executed for each request before
+		# the view (and later middleware) are called.
 
-	def process_response(self, request, response):
+		response = self.get_response(request)
+
+		# Code to be executed for each request/response after
+		# the view is called.
+
 		return response
+

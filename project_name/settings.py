@@ -18,8 +18,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Установленные в проекте Django-приложения
-# Подробнее: http://djbook.ru/rel1.8/ref/applications.html
-INSTALLED_APPS = (
+INSTALLED_APPS = [
 	'django.contrib.admin',
 	'django.contrib.auth',
 	'django.contrib.contenttypes',
@@ -29,20 +28,19 @@ INSTALLED_APPS = (
 	'bootstrap_pagination',
 	'portal',
 	'captcha',
-)
+]
 
-# Задействованные middleware. Более подробно: http://djbook.ru/rel1.8/topics/http/middleware.html
-MIDDLEWARE_CLASSES = (
+# Задействованные middleware.
+MIDDLEWARE = [
 	'django.contrib.sessions.middleware.SessionMiddleware',
 	'django.middleware.common.CommonMiddleware',
 	'django.middleware.csrf.CsrfViewMiddleware',
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
-	'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
 	'django.middleware.security.SecurityMiddleware',
 	'portal.middleware.PortalMiddleware',
-)
+]
 
 # Корневая карта URL-ок
 ROOT_URLCONF = '{{ project_name }}.urls'
